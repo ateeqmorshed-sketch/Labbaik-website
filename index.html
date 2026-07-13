@@ -23,7 +23,7 @@
   "url": "https://labbaikdrivingschool.com/",
   "logo": "https://labbaikdrivingschool.com/favicon.svg",
   "image": "https://labbaikdrivingschool.com/hero-car.jpg",
-  "telephone": "+1-403-383-6595",
+  "telephone": ["+1-403-383-6595", "+1-403-452-5314"],
   "email": "labbaikdrivingschool@gmail.com",
   "priceRange": "$55–$750",
   "address": {
@@ -91,9 +91,18 @@
   img{ max-width:100%; display:block; }
 
   .wrap{
-    max-width: 1140px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 28px;
+  }
+  /* Larger desktops: scale the whole layout up so it doesn't feel small */
+  @media (min-width: 1440px){
+    html{ font-size: 17.5px; }
+    .wrap{ max-width: 1360px; }
+  }
+  @media (min-width: 1800px){
+    html{ font-size: 19px; }
+    .wrap{ max-width: 1480px; }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -859,6 +868,8 @@
     <div>
       <a href="tel:4033836595">403-383-6595</a>
       <span class="sep">|</span>
+      <a href="tel:4034525314">403-452-5314</a>
+      <span class="sep">|</span>
       <a href="mailto:labbaikdrivingschool@gmail.com">labbaikdrivingschool@gmail.com</a>
     </div>
   </div>
@@ -1327,6 +1338,7 @@
       <h5>Contact</h5>
       <ul>
         <li><a href="tel:4033836595">403-383-6595</a></li>
+        <li><a href="tel:4034525314">403-452-5314</a></li>
         <li><a href="mailto:labbaikdrivingschool@gmail.com">labbaikdrivingschool@gmail.com</a></li>
         <li>5150 47 St NE, Unit 1101, Calgary, AB</li>
       </ul>
