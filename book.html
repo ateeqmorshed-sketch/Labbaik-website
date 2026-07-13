@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Lesson | Labbaik Driving School</title>
+<meta name="description" content="Choose your course and pickup option to book and pay for your driving lesson.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --asphalt: #20262b;
+    --cream: #f7f3ea;
+    --paper: #fffdf8;
+    --amber: #d98a2b;
+    --amber-deep: #b96f1d;
+    --pine: #3c5a4a;
+    --line: rgba(32,38,43,0.12);
+    --ink: #20262b;
+    --ink-soft: #5b6168;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0; background: var(--cream); color: var(--ink);
+    font-family:'Manrope', sans-serif; -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3{ font-family:'Fraunces', serif; font-weight:600; margin:0; }
+  a{ color: inherit; text-decoration:none; }
+  .wrap{ max-width: 680px; margin: 0 auto; padding: 0 20px; }
+
+  header.top{
+    background: var(--asphalt); color: var(--cream);
+    padding: 22px 20px;
+  }
+  header.top .wrap{ display:flex; align-items:center; gap:12px; }
+  .brand-mark{
+    width:38px; height:38px; border-radius:9px; background: rgba(247,243,234,0.1);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .brand-mark svg{ width:20px; height:20px; }
+  header.top h1{ font-size:1.05rem; color: var(--paper); }
+  header.top span:not(.brand-mark){ display:block; font-size:0.7rem; color: var(--amber); font-weight:700; letter-spacing:0.04em; text-transform:uppercase; margin-top:2px; }
+
+  main{ padding: 40px 0 80px; }
+
+  .intro{ margin-bottom: 30px; }
+  .intro h2{ font-size: 1.6rem; margin-bottom: 10px; }
+  .intro p{ color: var(--ink-soft); font-size: 1rem; line-height: 1.6; }
+
+  .section-label{
+    font-size: 0.82rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--amber-deep); margin: 34px 0 6px;
+  }
+  .section-label:first-of-type{ margin-top: 0; }
+  .section-note{
+    font-size: 0.86rem; color: var(--ink-soft); margin: 0 0 12px;
+  }
+
+  .option-list{ display:flex; flex-direction:column; gap: 14px; }
+  .option-card{
+    display:block;
+    background: var(--paper); border: 1.5px solid var(--line); border-radius:16px;
+    padding: 20px 22px; transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .option-card:hover{
+    border-color: var(--amber-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -16px rgba(32,38,43,0.3);
+  }
+  .option-top{ display:flex; align-items:center; justify-content:space-between; gap:14px; }
+  .option-title{ font-family:'Fraunces', serif; font-weight:600; font-size:1.12rem; }
+  .option-price{
+    font-family:'Fraunces', serif; font-weight:700; font-size:1.3rem; color: var(--amber-deep);
+    flex-shrink:0;
+  }
+  .option-price .per-unit{
+    font-family:'Manrope', sans-serif; font-weight:600; font-size:0.74rem; color: var(--ink-soft);
+    margin-left: 2px;
+  }
+  .option-desc{ color: var(--ink-soft); font-size:0.9rem; margin-top:6px; line-height:1.5; }
+  .option-cta{
+    display:inline-flex; align-items:center; gap:6px; margin-top:14px;
+    font-weight:700; font-size:0.88rem; color: var(--amber-deep);
+  }
+  .option-cta svg{ width:15px; height:15px; }
+
+  .option-card.whitehorn{ border-color: rgba(60,90,74,0.3); background: rgba(60,90,74,0.05); }
+  .option-card.whitehorn .option-price{ color: var(--pine); }
+  .option-card.whitehorn .option-cta{ color: var(--pine); }
+
+  .option-card.rental{ border-color: rgba(32,38,43,0.18); background: rgba(32,38,43,0.03); }
+
+  .help-note{
+    margin-top: 32px; padding: 18px 20px; border-radius:14px;
+    background: rgba(217,138,43,0.08); border: 1px solid rgba(217,138,43,0.25);
+    font-size: 0.88rem; color: var(--ink-soft); line-height:1.6;
+  }
+  .help-note strong{ color: var(--asphalt); }
+  .help-note a{ color: var(--amber-deep); font-weight:700; text-decoration:underline; }
+
+  .not-sure{
+    margin-top: 22px; text-align:center; font-size:0.9rem; color: var(--ink-soft);
+  }
+  .not-sure a{ color: var(--amber-deep); font-weight:700; text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12L5.5 6.5C5.81 5.81 6.5 5.36 7.26 5.36H16.74C17.5 5.36 18.19 5.81 18.5 6.5L21 12" stroke="#f7f3ea" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 12H21" stroke="#f7f3ea" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="7" cy="15" r="1.4" fill="#d98a2b"/>
+        <circle cx="17" cy="15" r="1.4" fill="#d98a2b"/>
+      </svg>
+    </span>
+    <div>
+      <h1>Labbaik Driving School</h1>
+      <span>Book a Lesson</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="intro">
+      <h2>Choose your pickup option</h2>
+      <p>Your price depends on the course you need and where you'd like to be picked up. Pick the option below that matches your situation — you'll book your time and pay securely, all on the next page.</p>
+    </div>
+
+    <h3 class="section-label">Full Course</h3>
+    <div class="option-list">
+
+      <a class="option-card whitehorn" href="https://calendly.com/labbaikdrivingschool/full-course-lesson" target="_blank" rel="noopener">
+        <div class="option-top">
+          <span class="option-title">Meet at Whitehorn Station</span>
+          <span class="option-price">$550</span>
+        </div>
+        <p class="option-desc">No pickup needed — we'll meet you there. The simplest option if it's convenient for you.</p>
+        <span class="option-cta">Book this option
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+
+      <a class="option-card" href="https://calendly.com/labbaikdrivingschool/full-course-lesson-whitehorn-station-meetup-clone-1" target="_blank" rel="noopener">
+        <div class="option-top">
+          <span class="option-title">Pickup within 10 km</span>
+          <span class="option-price">$550</span>
+        </div>
+        <p class="option-desc">For pickup addresses within about 10 kilometres of our NE Calgary base.</p>
+        <span class="option-cta">Book this option
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+
+      <a class="option-card" href="https://calendly.com/labbaikdrivingschool/full-course-lesson-whitehorn-station-meetup-clone" target="_blank" rel="noopener">
+        <div class="option-top">
+          <span class="option-title">Pickup within 15 km</span>
+          <span class="option-price">$650</span>
+        </div>
+        <p class="option-desc">For pickup addresses roughly 10–15 kilometres from our NE Calgary base.</p>
+        <span class="option-cta">Book this option
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+
+      <a class="option-card" href="https://calendly.com/labbaikdrivingschool/full-course-lesson-calgary-pickup-within-15-k-clone" target="_blank" rel="noopener">
+        <div class="option-top">
+          <span class="option-title">Pickup within 20–25 km</span>
+          <span class="option-price">$750</span>
+        </div>
+        <p class="option-desc">For pickup addresses further out, roughly 15–25 kilometres from our NE Calgary base.</p>
+        <span class="option-cta">Book this option
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+
+    </div>
+
+    <h3 class="section-label">Brush-Up Lessons</h3>
+    <p class="section-note">Minimum booking of 2 sessions required.</p>
+    <div class="option-list">
+
+      <a class="option-card" href="https://calendly.com/labbaikdrivingschool/brush-up-lesson" target="_blank" rel="noopener">
+        <div class="option-top">
+          <span class="option-title">Pickup within 10 km</span>
+          <span class="option-price">$55<span class="per-unit">/session</span></span>
+        </div>
+        <p class="option-desc">For pickup addresses within about 10 kilometres of our NE Calgary base. Minimum 2 sessions.</p>
+        <span class="option-cta">Book this option
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+
+      <a class="option-card" href="https://calendly.com/labbaikdrivingschool/brush-up-lesson-within-10km-pickup-clone" target="_blank" rel="noopener">
+        <div class="option-top">
+          <span class="option-title">Pickup within 20 km</span>
+          <span class="option-price">$75<span class="per-unit">/session</span></span>
+        </div>
+        <p class="option-desc">For pickup addresses roughly 10–20 kilometres from our NE Calgary base. Minimum 2 sessions.</p>
+        <span class="option-cta">Book this option
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+
+    </div>
+
+    <h3 class="section-label">Road Test</h3>
+    <div class="option-list">
+
+      <a class="option-card rental" href="https://calendly.com/labbaikdrivingschool/brush-up-lesson-within-20km-pickup-clone" target="_blank" rel="noopener">
+        <div class="option-top">
+          <span class="option-title">Rent a Car for the Test</span>
+          <span class="option-price">$90</span>
+        </div>
+        <p class="option-desc">Take your road test in a familiar, well-maintained vehicle. Requires a brush-up lesson beforehand.</p>
+        <span class="option-cta">Book this option
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </a>
+
+    </div>
+
+    <div class="help-note">
+      <strong>Not sure how far you are from us, or which option applies?</strong> We're based near 5150 47 St NE, Calgary. If you're unsure which option matches your location, or it's further than the ranges listed above, please contact us before booking so we can confirm the right price.
+    </div>
+
+    <p class="not-sure">
+      Questions? Call <a href="tel:4033836595">403-383-6595</a> or email <a href="mailto:labbaikdrivingschool@gmail.com">labbaikdrivingschool@gmail.com</a>
+    </p>
+
+  </div>
+</main>
+
+</body>
+</html>
