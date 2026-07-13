@@ -158,18 +158,21 @@
     display:flex; align-items:center; gap:12px;
   }
   .brand-mark{
-    width:42px; height:42px;
-    border-radius: 10px;
-    background: var(--asphalt);
+    width:56px; height:46px;
     display:flex; align-items:center; justify-content:center;
     flex-shrink:0;
   }
-  .brand-mark svg{ width:24px; height:24px; }
-  .brand-text h1{ font-size: 1.18rem; line-height:1.1; color: var(--asphalt); }
-  .brand-text span{
-    display:block; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
-    color: var(--amber-deep); font-weight:700; margin-top:2px;
+  .brand-mark svg{ width:56px; height:46px; }
+  .brand-text h1{
+    font-family:'Manrope',sans-serif; font-weight:800; text-transform:uppercase;
+    font-size: 1.18rem; line-height:1.1; letter-spacing:0.04em; color:#d81f26;
   }
+  .brand-text span{
+    display:block; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase;
+    color:#d81f26; font-weight:700; margin-top:2px;
+  }
+  footer .brand-mark{ background: var(--paper); border-radius:10px; }
+  footer .brand-mark svg{ width:46px; height:38px; }
   .nav-links{
     display:flex; align-items:center; gap: 22px;
     font-weight:600; font-size:0.88rem;
@@ -786,8 +789,8 @@
 
     /* Header: shrink the brand row so it doesn't eat a third of the screen */
     nav.main{ padding: 12px 16px; }
-    .brand-mark{ width:36px; height:36px; }
-    .brand-mark svg{ width:20px; height:20px; }
+    .brand-mark{ width:44px; height:36px; }
+    .brand-mark svg{ width:44px; height:36px; }
     .brand-text h1{ font-size: 1.02rem; }
     .brand-text span{ font-size: 0.64rem; }
     .topbar .wrap{ padding: 7px 16px; font-size: 0.76rem; }
@@ -821,18 +824,24 @@
   <nav class="main wrap">
     <a href="#main" class="brand" aria-label="Labbaik Driving School home">
       <span class="brand-mark">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 12L5.5 6.5C5.81 5.81 6.5 5.36 7.26 5.36H16.74C17.5 5.36 18.19 5.81 18.5 6.5L21 12" stroke="#f7f3ea" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M3 12V16.5C3 17.05 3.45 17.5 4 17.5H5.5C6.05 17.5 6.5 17.05 6.5 16.5V15" stroke="#d98a2b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M21 12V16.5C21 17.05 20.55 17.5 20 17.5H18.5C17.95 17.5 17.5 17.05 17.5 16.5V15" stroke="#d98a2b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M3 12H21" stroke="#f7f3ea" stroke-width="1.6" stroke-linecap="round"/>
-          <circle cx="7" cy="15" r="1.4" fill="#f7f3ea"/>
-          <circle cx="17" cy="15" r="1.4" fill="#f7f3ea"/>
+        <svg viewBox="40 85 450 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><mask id="arch-h"><rect x="0" y="0" width="512" height="512" fill="#fff"/><circle cx="172" cy="384" r="52" fill="#000"/><circle cx="356" cy="384" r="52" fill="#000"/></mask></defs>
+          <g transform="rotate(9 310 185)">
+            <rect x="243" y="118" width="134" height="134" rx="20" fill="#d81f26"/>
+            <path d="M282 148 h30 v76 h56 v26 h-86 z" fill="#ffffff"/>
+          </g>
+          <g mask="url(#arch-h)">
+            <path fill="#1c4ba0" d="M54 360 C 86 326 138 312 208 310 C 288 308 332 304 394 288 C 432 278 456 264 474 242 C 470 276 446 302 402 318 C 368 332 328 340 290 344 L 136 344 C 106 346 88 356 80 378 C 68 376 56 368 54 360 Z"/>
+            <path d="M150 330 Q 252 226 400 326" fill="none" stroke="#1c4ba0" stroke-width="26" stroke-linecap="round"/>
+            <path d="M258 268 L 251 326" fill="none" stroke="#1c4ba0" stroke-width="13" stroke-linecap="round"/>
+          </g>
+          <circle cx="172" cy="384" r="38" fill="none" stroke="#17233f" stroke-width="24"/>
+          <circle cx="356" cy="384" r="38" fill="none" stroke="#17233f" stroke-width="24"/>
         </svg>
       </span>
       <span class="brand-text">
-        <h1>Labbaik Driving School</h1>
-        <span>Proactive &amp; Defensive Driving</span>
+        <h1>Labbaik</h1>
+        <span>Driving School</span>
       </span>
     </a>
     <div class="nav-links" id="nav-links">
@@ -1260,11 +1269,19 @@
     <div>
       <div class="brand">
         <span class="brand-mark">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 12L5.5 6.5C5.81 5.81 6.5 5.36 7.26 5.36H16.74C17.5 5.36 18.19 5.81 18.5 6.5L21 12" stroke="#f7f3ea" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M3 12H21" stroke="#f7f3ea" stroke-width="1.6" stroke-linecap="round"/>
-            <circle cx="7" cy="15" r="1.4" fill="#d98a2b"/>
-            <circle cx="17" cy="15" r="1.4" fill="#d98a2b"/>
+          <svg viewBox="40 85 450 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><mask id="arch-f"><rect x="0" y="0" width="512" height="512" fill="#fff"/><circle cx="172" cy="384" r="52" fill="#000"/><circle cx="356" cy="384" r="52" fill="#000"/></mask></defs>
+            <g transform="rotate(9 310 185)">
+              <rect x="243" y="118" width="134" height="134" rx="20" fill="#d81f26"/>
+              <path d="M282 148 h30 v76 h56 v26 h-86 z" fill="#ffffff"/>
+            </g>
+            <g mask="url(#arch-f)">
+              <path fill="#1c4ba0" d="M54 360 C 86 326 138 312 208 310 C 288 308 332 304 394 288 C 432 278 456 264 474 242 C 470 276 446 302 402 318 C 368 332 328 340 290 344 L 136 344 C 106 346 88 356 80 378 C 68 376 56 368 54 360 Z"/>
+              <path d="M150 330 Q 252 226 400 326" fill="none" stroke="#1c4ba0" stroke-width="26" stroke-linecap="round"/>
+              <path d="M258 268 L 251 326" fill="none" stroke="#1c4ba0" stroke-width="13" stroke-linecap="round"/>
+            </g>
+            <circle cx="172" cy="384" r="38" fill="none" stroke="#17233f" stroke-width="24"/>
+            <circle cx="356" cy="384" r="38" fill="none" stroke="#17233f" stroke-width="24"/>
           </svg>
         </span>
         <span class="brand-text"><h1>Labbaik Driving School</h1></span>

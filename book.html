@@ -37,10 +37,10 @@
   }
   header.top .wrap{ display:flex; align-items:center; gap:12px; }
   .brand-mark{
-    width:38px; height:38px; border-radius:9px; background: rgba(247,243,234,0.1);
+    width:50px; height:42px; border-radius:9px; background:#fffdf8; padding:3px;
     display:flex; align-items:center; justify-content:center; flex-shrink:0;
   }
-  .brand-mark svg{ width:20px; height:20px; }
+  .brand-mark svg{ width:42px; height:34px; }
   header.top h1{ font-size:1.05rem; color: var(--paper); }
   header.top span:not(.brand-mark){ display:block; font-size:0.7rem; color: var(--amber); font-weight:700; letter-spacing:0.04em; text-transform:uppercase; margin-top:2px; }
 
@@ -112,11 +112,19 @@
 <header class="top">
   <div class="wrap">
     <span class="brand-mark">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 12L5.5 6.5C5.81 5.81 6.5 5.36 7.26 5.36H16.74C17.5 5.36 18.19 5.81 18.5 6.5L21 12" stroke="#f7f3ea" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M3 12H21" stroke="#f7f3ea" stroke-width="1.6" stroke-linecap="round"/>
-        <circle cx="7" cy="15" r="1.4" fill="#d98a2b"/>
-        <circle cx="17" cy="15" r="1.4" fill="#d98a2b"/>
+      <svg viewBox="40 85 450 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><mask id="arch-b"><rect x="0" y="0" width="512" height="512" fill="#fff"/><circle cx="172" cy="384" r="52" fill="#000"/><circle cx="356" cy="384" r="52" fill="#000"/></mask></defs>
+        <g transform="rotate(9 310 185)">
+          <rect x="243" y="118" width="134" height="134" rx="20" fill="#d81f26"/>
+          <path d="M282 148 h30 v76 h56 v26 h-86 z" fill="#ffffff"/>
+        </g>
+        <g mask="url(#arch-b)">
+          <path fill="#1c4ba0" d="M54 360 C 86 326 138 312 208 310 C 288 308 332 304 394 288 C 432 278 456 264 474 242 C 470 276 446 302 402 318 C 368 332 328 340 290 344 L 136 344 C 106 346 88 356 80 378 C 68 376 56 368 54 360 Z"/>
+          <path d="M150 330 Q 252 226 400 326" fill="none" stroke="#1c4ba0" stroke-width="26" stroke-linecap="round"/>
+          <path d="M258 268 L 251 326" fill="none" stroke="#1c4ba0" stroke-width="13" stroke-linecap="round"/>
+        </g>
+        <circle cx="172" cy="384" r="38" fill="none" stroke="#17233f" stroke-width="24"/>
+        <circle cx="356" cy="384" r="38" fill="none" stroke="#17233f" stroke-width="24"/>
       </svg>
     </span>
     <div>
