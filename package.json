@@ -1,0 +1,6 @@
+{
+  "name": "labbaik-driving-school",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Labbaik Driving School's full website: marketing site (index.html) and booking page (book.html), deployed together as one static site"
+}
