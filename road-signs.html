@@ -40,7 +40,9 @@
   body{ margin:0; background:var(--cream); color:var(--ink); font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; }
   h1,h2,h3{ font-family:'Fraunces',serif; font-weight:600; margin:0; }
   a{ color:inherit; text-decoration:none; }
-  .wrap{ max-width:960px; margin:0 auto; padding:0 20px; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 20px; }
+  @media (min-width:1440px){ html{ font-size:17.5px; } .wrap{ max-width:1220px; } }
+  @media (min-width:1800px){ html{ font-size:19px; } .wrap{ max-width:1320px; } }
 
   header.top{ background:var(--asphalt); color:var(--cream); padding:18px 20px; }
   header.top .wrap{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
@@ -59,7 +61,7 @@
   .quiz-head{ display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:16px; }
   .quiz-head .label{ font-size:0.8rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:var(--amber-deep); }
   .quiz-head .score{ font-size:0.85rem; color:var(--ink-soft); font-weight:700; }
-  .sign-stage{ width:170px; height:170px; margin:0 auto 18px; }
+  .sign-stage{ width:200px; height:200px; margin:0 auto 18px; }
   .sign-stage img{ width:100%; height:100%; object-fit:contain; }
   .choices{ display:grid; gap:10px; }
   .choice{ text-align:left; font:inherit; font-weight:600; font-size:0.95rem; padding:13px 16px; border-radius:12px; border:1.5px solid var(--line); background:var(--cream); cursor:pointer; transition:border-color .12s, transform .12s; }

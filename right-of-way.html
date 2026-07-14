@@ -39,7 +39,9 @@
   body{ margin:0; background:var(--cream); color:var(--ink); font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; }
   h1,h2,h3{ font-family:'Fraunces',serif; font-weight:600; margin:0; }
   a{ color:inherit; text-decoration:none; }
-  .wrap{ max-width:980px; margin:0 auto; padding:0 20px; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 20px; }
+  @media (min-width:1440px){ html{ font-size:17.5px; } .wrap{ max-width:1280px; } }
+  @media (min-width:1800px){ html{ font-size:19px; } .wrap{ max-width:1400px; } }
 
   header.top{ background:var(--asphalt); color:var(--cream); padding:18px 20px; }
   header.top .wrap{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
@@ -54,7 +56,7 @@
   .intro h1{ font-size:clamp(1.7rem, 3.4vw, 2.4rem); margin-bottom:12px; }
   .intro p{ color:var(--ink-soft); line-height:1.65; max-width:66ch; margin:0 0 10px; }
 
-  .player-grid{ display:grid; grid-template-columns:340px 1fr; gap:22px; margin-top:28px; align-items:start; }
+  .player-grid{ display:grid; grid-template-columns:minmax(340px, 460px) 1fr; gap:26px; margin-top:28px; align-items:start; }
   @media (max-width:820px){ .player-grid{ grid-template-columns:1fr; } }
 
   .player{ background:var(--paper); border:1.5px solid var(--line); border-radius:18px; padding:20px; position:sticky; top:14px; }
@@ -134,7 +136,7 @@
       <div class="player">
         <h3 id="p-title"></h3>
         <div class="sub2" id="p-sub"></div>
-        <canvas id="scene" width="640" height="640" aria-label="Animated driving scenario"></canvas>
+        <canvas id="scene" width="880" height="880" aria-label="Animated driving scenario"></canvas>
         <div class="caption" id="p-caption"></div>
         <div class="controls">
           <button class="pbtn" id="p-play" aria-label="Play or pause">⏸</button>
