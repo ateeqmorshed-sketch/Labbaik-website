@@ -60,7 +60,7 @@
   .quiz-head .label{ font-size:0.8rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:var(--amber-deep); }
   .quiz-head .score{ font-size:0.85rem; color:var(--ink-soft); font-weight:700; }
   .sign-stage{ width:170px; height:170px; margin:0 auto 18px; }
-  .sign-stage svg{ width:100%; height:100%; }
+  .sign-stage img{ width:100%; height:100%; object-fit:contain; }
   .choices{ display:grid; gap:10px; }
   .choice{ text-align:left; font:inherit; font-weight:600; font-size:0.95rem; padding:13px 16px; border-radius:12px; border:1.5px solid var(--line); background:var(--cream); cursor:pointer; transition:border-color .12s, transform .12s; }
   .choice:hover{ border-color:var(--amber-deep); }
@@ -81,8 +81,8 @@
   .section-label{ font-size:0.85rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:var(--amber-deep); margin:44px 0 8px; }
   .gallery{ display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:14px; margin-top:14px; }
   .g-card{ background:var(--paper); border:1.5px solid var(--line); border-radius:14px; padding:16px; text-align:center; }
-  .g-card .art{ width:86px; height:86px; margin:0 auto 10px; }
-  .g-card .art svg{ width:100%; height:100%; }
+  .g-card .art{ width:96px; height:96px; margin:0 auto 10px; }
+  .g-card .art img{ width:100%; height:100%; object-fit:contain; }
   .g-card h3{ font-size:1rem; margin-bottom:6px; }
   .g-card p{ font-size:0.84rem; color:var(--ink-soft); line-height:1.45; margin:0; }
 
@@ -154,8 +154,8 @@
       </div>
     </div>
 
-    <h2 class="section-label" id="gallery-title">All Signs &amp; Meanings</h2>
-    <p style="color:var(--ink-soft); max-width:64ch; line-height:1.6;">Every sign from the quiz, with its meaning. Signs shown are simplified practice versions of Alberta's official signs.</p>
+    <h2 class="section-label" id="gallery-title">All 34 Signs &amp; Meanings</h2>
+    <p style="color:var(--ink-soft); max-width:64ch; line-height:1.6;">Every sign from the quiz, with its meaning — the official sign designs from the Alberta Driver's Guide set.</p>
     <div class="gallery" id="gallery"></div>
 
     <div class="cross">
@@ -181,7 +181,7 @@
   // Gallery (crawlable text is already in the HTML flow once injected;
   // meanings also serve as the on-page reference).
   $('gallery').innerHTML = SIGNS.map(s =>
-    '<div class="g-card"><div class="art">' + s.svg + '</div><h3>' + s.name + '</h3><p>' + s.meaning + '</p></div>'
+    '<div class="g-card"><div class="art"><img src="' + s.img + '" alt="' + s.name + ' sign" loading="lazy" width="256" height="256"></div><h3>' + s.name + '</h3><p>' + s.meaning + '</p></div>'
   ).join('');
 
   // Quiz
@@ -196,7 +196,7 @@
     const s = deck[pos];
     $('q-pos').textContent = (pos+1);
     $('q-score').textContent = 'Score: ' + score;
-    $('q-sign').innerHTML = s.svg;
+    $('q-sign').innerHTML = '<img src="' + s.img + '" alt="Which sign is this?" width="256" height="256">';
     $('q-feedback').textContent = '';
     $('q-next').hidden = true;
     const opts = shuffle([s.meaning].concat(s.wrong));
