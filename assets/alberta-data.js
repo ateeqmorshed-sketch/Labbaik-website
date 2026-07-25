@@ -174,9 +174,9 @@ const FEES = [
   { item: "Knowledge test (at registry)", fee: "≈ $17 per attempt" },
   { item: "Class 7 licence issue", fee: "Varies by registry" },
   { item: "Class 5-GDL road test", fee: "≈ $83\u2013150, varies by registry" },
-  { item: "Labbaik full course", fee: "$550–$750 (GST incl.)" },
-  { item: "Labbaik brush-up session", fee: "$55–$75" },
-  { item: "Car rental for road test", fee: "$90 flat" },
+  { item: "Labbaik full course", fee: "$550–$750 + GST" },
+  { item: "Labbaik brush-up session", fee: "$55–$75 + GST" },
+  { item: "Car rental for road test", fee: "$90 flat + GST" },
 ];
 
 const DOCS = [

@@ -563,10 +563,11 @@
   .course-card.featured .note{ color: rgba(247,243,234,0.72); }
   .course-card .price{
     margin-top:auto;
-    display:flex; align-items:baseline; gap:8px;
+    display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;
     padding-top: 18px;
     border-top: 1px dashed var(--line);
   }
+  .course-card .price .total{ width:100%; margin-top:3px; font-weight:600; }
   .course-card.featured .price{ border-top-color: rgba(247,243,234,0.18); }
   .course-card .price b{ font-family:'Fraunces', serif; font-size:1.5rem; }
   .course-card .price span{ font-size:0.82rem; color: var(--ink-soft); }
@@ -1073,7 +1074,7 @@
           </div>
           <h4>Brush-Up Lessons</h4>
           <p class="note">For licensed drivers who want to sharpen specific skills &mdash; parallel parking, highway merging, or just regaining confidence. Minimum 2 sessions.</p>
-          <div class="price"><b>$55&ndash;$75</b><span>per session</span></div>
+          <div class="price"><b>$55&ndash;$75</b><span>per session + GST</span><span class="total">$57.75&ndash;$78.75 total per session</span></div>
           <button class="details-toggle" data-target="details-brushup" aria-expanded="false">
             What's included <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
@@ -1081,7 +1082,7 @@
             <ul>
               <li>One-on-one time with an experienced instructor</li>
               <li>Focus on whatever skill you need most: parking, merging, lane changes, nerves</li>
-              <li>$55/session within 10km of our base, $75/session within 20km &mdash; minimum 2 sessions</li>
+              <li>$55/session within 10km of our base, $75/session within 20km, plus GST ($57.75&ndash;$78.75 per session) &mdash; minimum 2 sessions</li>
             </ul>
           </div>
           <a href="/book.html" class="cta-link">Book a session <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
@@ -1093,8 +1094,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9L12 2z"/><path d="M12 8v8M8 11l4-3 4 3"/></svg>
           </div>
           <h4>Full Course</h4>
-          <p class="note">10 hours behind the wheel + 15 hours online instruction, in 2-hour sessions. Our most complete path from new driver to road-test ready. Price varies by pickup location; GST included.</p>
-          <div class="price"><b>$550&ndash;$750</b><span>full course</span></div>
+          <p class="note">10 hours behind the wheel + 15 hours online instruction, in 2-hour sessions. Our most complete path from new driver to road-test ready. Price varies by pickup location; GST is added at checkout.</p>
+          <div class="price"><b>$550&ndash;$750</b><span>+ GST</span><span class="total">$577.50&ndash;$787.50 total</span></div>
           <button class="details-toggle" data-target="details-full" aria-expanded="false">
             What's included <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
@@ -1103,7 +1104,7 @@
               <li>10 hours of in-car instruction, split into 2-hour sessions</li>
               <li>15 hours of online classroom instruction</li>
               <li>A lesson plan that builds from the basics up to road-test maneuvers</li>
-              <li>GST included; final price depends on your pickup location</li>
+              <li>Final price depends on your pickup location; GST is added at checkout</li>
             </ul>
           </div>
           <a href="/book.html" class="cta-link">Enroll now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
@@ -1115,7 +1116,7 @@
           </div>
           <h4>Rent a Car for Your Test</h4>
           <p class="note">Take your road test in a familiar, well-maintained vehicle. Requires a brush-up lesson beforehand.</p>
-          <div class="price"><b>$90</b><span>flat rate</span></div>
+          <div class="price"><b>$90</b><span>flat rate + GST</span><span class="total">$94.50 total</span></div>
           <button class="details-toggle" data-target="details-test" aria-expanded="false">
             What's included <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
@@ -1123,7 +1124,7 @@
             <ul>
               <li>Use of the school's car for your road test appointment</li>
               <li>Requires a brush-up lesson beforehand, so you're comfortable in the car</li>
-              <li>Flat $90 rate, separate from lesson costs</li>
+              <li>Flat $90 + GST ($94.50 total), separate from lesson costs</li>
             </ul>
           </div>
           <a href="/book.html" class="cta-link">Reserve a car <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
@@ -1272,7 +1273,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-a" hidden>
-            <p>Brush-up lessons are priced per session: $55 if your pickup is within 10km of our base, or $75 within 20km. A minimum of 2 sessions is required so there's real time to work on a skill, not just warm up.</p>
+            <p>Brush-up lessons are priced per session: $55 if your pickup is within 10km of our base, or $75 within 20km, plus GST ($57.75 or $78.75 per session). A minimum of 2 sessions is required so there's real time to work on a skill, not just warm up.</p>
           </div>
         </div>
 
@@ -1282,7 +1283,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-a" hidden>
-            <p>10 hours of in-car driving instruction plus 15 hours of online learning, delivered in 2-hour sessions. Total price ranges $550&ndash;$750 depending on your pickup location, GST included.</p>
+            <p>10 hours of in-car driving instruction plus 15 hours of online learning, delivered in 2-hour sessions. The price ranges $550&ndash;$750 depending on your pickup location, plus GST &mdash; so $577.50&ndash;$787.50 all in.</p>
           </div>
         </div>
 
@@ -1292,7 +1293,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-a" hidden>
-            <p>Yes &mdash; it's a flat $90. We just ask that you take a brush-up lesson first, so you're comfortable in the car before test day.</p>
+            <p>Yes &mdash; it's a flat $90 + GST ($94.50 total). We just ask that you take a brush-up lesson first, so you're comfortable in the car before test day.</p>
           </div>
         </div>
 
@@ -1620,13 +1621,13 @@
     var rec = { id: 'card-full', title: 'The Full Course', desc: "10 hours of in-car driving plus 15 hours online \u2014 everything you need to go from new driver to road-test ready." };
 
     if(q1 === 'licensed' || q2 === 'confidence'){
-      rec = { id: 'card-brushup', title: 'Brush-Up Lessons', desc: "Focused, one-on-one time on exactly the skills you want to sharpen. $55\u2013$75/session, 2-session minimum." };
+      rec = { id: 'card-brushup', title: 'Brush-Up Lessons', desc: "Focused, one-on-one time on exactly the skills you want to sharpen. $55\u2013$75/session + GST, 2-session minimum." };
     } else if(q2 === 'test'){
-      rec = { id: 'card-test', title: 'Rent a Car for Your Test', desc: "Take your road test in a familiar car for a flat $90, after a brush-up lesson." };
+      rec = { id: 'card-test', title: 'Rent a Car for Your Test', desc: "Take your road test in a familiar car for a flat $90 + GST, after a brush-up lesson." };
     } else if(q1 === 'new' || q2 === 'license'){
       rec = { id: 'card-full', title: 'The Full Course', desc: "10 hours of in-car driving plus 15 hours online \u2014 everything you need to go from new driver to road-test ready." };
     } else if(q1 === 'some'){
-      rec = { id: 'card-brushup', title: 'Brush-Up Lessons', desc: "A few focused sessions to tighten up the skills you're less sure about before you go further. $55\u2013$75/session, 2-session minimum." };
+      rec = { id: 'card-brushup', title: 'Brush-Up Lessons', desc: "A few focused sessions to tighten up the skills you're less sure about before you go further. $55\u2013$75/session + GST, 2-session minimum." };
     }
 
     title.textContent = rec.title;
