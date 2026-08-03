@@ -576,7 +576,9 @@
     border-radius: 16px;
     padding: 24px 28px;
     margin-top: 28px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
   }
+  .addon-card:hover{ border-left-color: var(--amber-deep); transform: translateY(-2px); }
   .addon-card .ico{
     width:46px; height:46px; border-radius:12px;
     background: rgba(217,138,43,0.14);
@@ -1152,7 +1154,7 @@
         </div>
       </div>
 
-      <div class="addon-card">
+      <a href="/book.html" class="addon-card">
         <div class="ico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
@@ -1161,7 +1163,7 @@
           <p>The complete online classroom course, taken at your own pace. Booked on its own &mdash; it is not part of the Full Course.</p>
         </div>
         <div class="pricebit"><b>$60</b><span>+ GST &middot; $63.00 total</span></div>
-      </div>
+      </a>
 
       <div class="payment-note">
         <div class="row"><span>Booking online? Pay securely by card.</span></div>
