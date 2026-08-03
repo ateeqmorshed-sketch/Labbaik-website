@@ -144,8 +144,9 @@ const SIGNS = [
 ];
 
 const COURSES = [
-  { id: "full", name: "Full Course", tag: "Most popular", desc: "10 hrs behind the wheel + 15 hrs online. New driver to road-test ready.", price: "$550–$750", len: "2-hr sessions" },
-  { id: "brushup", name: "Brush-Up Lessons", tag: null, desc: "Sharpen specific skills — parking, merging, confidence. Min. 2 sessions.", price: "$55–$75", len: "per session" },
+  { id: "full", name: "Full Course", tag: "Most popular", desc: "10 hrs behind the wheel. New driver to road-test ready.", price: "$550–$750", len: "2-hr lessons" },
+  { id: "brushup", name: "Brush-Up Lessons", tag: null, desc: "Sharpen specific skills — parking, merging, confidence. Min. 2 hours.", price: "$55–$75", len: "per hour" },
+  { id: "online", name: "15-Hour Online Class", tag: null, desc: "The full online classroom course, at your own pace. Booked separately.", price: "$60", len: "flat" },
   { id: "rental", name: "Car for Road Test", tag: null, desc: "Take your test in a familiar, well-maintained car. Includes warm-up.", price: "$90", len: "flat rate" },
 ];
 
@@ -166,7 +167,7 @@ const CHECKLIST = [
 const JOURNEY = [
   { step: 1, title: "Exchange or start your licence", desc: "Newcomers: some countries exchange directly at a registry. Otherwise, start with the Class 7 knowledge test.", done: true },
   { step: 2, title: "Pass the knowledge test", desc: "30 questions at an Alberta registry — pass mark 25. Practice here until you consistently score 27+.", done: false },
-  { step: 3, title: "Take driving lessons", desc: "Build real Calgary road skills. Experienced drivers often need 4–6 brush-up sessions to break old habits.", done: false },
+  { step: 3, title: "Take driving lessons", desc: "Build real Calgary road skills. Experienced drivers often need 4–6 brush-up hours to break old habits.", done: false },
   { step: 4, title: "Pass the road test", desc: "Book the Class 5-GDL test. Rent our car ($90) so you test in a vehicle you know.", done: false },
 ];
 
@@ -175,7 +176,8 @@ const FEES = [
   { item: "Class 7 licence issue", fee: "Varies by registry" },
   { item: "Class 5-GDL road test", fee: "≈ $83\u2013150, varies by registry" },
   { item: "Labbaik full course", fee: "$550–$750 + GST" },
-  { item: "Labbaik brush-up session", fee: "$55–$75 + GST" },
+  { item: "Labbaik brush-up hour", fee: "$55–$75 + GST" },
+  { item: "Labbaik 15-hour online class", fee: "$60 + GST" },
   { item: "Car rental for road test", fee: "$90 flat + GST" },
 ];
 
